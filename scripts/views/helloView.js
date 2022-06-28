@@ -1,10 +1,11 @@
 import View from "./view.js";
 
 class HelloView extends View {
-  _parentEl = document.querySelector("#centered-box");
+  _parentEl = document.querySelector("#insulation");
 
   _generateMarkup() {
     return `
+    <div id="centered-box" class="rel flexc">
       <div id="hello-box" class="rel flexc fcenter">
         <h1 id="hello" class="rel">Hello, what's your name?</h1>
         <form id="name-form" class="rel">
@@ -14,11 +15,17 @@ class HelloView extends View {
             name="name"
             placeholder="Enter your name here"
           />
-          <div id="submit" class="rel flexr fcenter">
-            <div id="ok">OK</div>
+          <div id="submit" class="rel">
+            <img
+              src="images/engage.png"
+              alt="Star Trek Icon"
+              id="engage-icon" class="rel"
+            />
+            <div id="engage" class="rel flexc fcenter"><p id="engage-text" class="rel">Engage!</p></div>
           </div>
         </form>
       </div>
+    </div>
     `;
   }
 

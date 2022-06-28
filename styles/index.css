@@ -10,9 +10,9 @@
   /* Black */
   --black: #000;
   /* Background */
-  --index-background: url(../images/carbon-fiber-header.jpg);
+  --index-background: url(../images/space.jpg);
   /* Button background */
-  --square-btn: url(../images/square-button.png);
+  --glass-btn: url(../images/glass-button.png);
 }
 
 /* Makes every element into a box that includes margins and padding */
@@ -124,12 +124,12 @@ body {
 }
 
 #submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   margin: 1rem;
-  width: 4rem;
-  height: 4rem;
-  background-image: var(--square-btn);
-  background-size: contain;
-  background-repeat: no-repeat;
   color: var(--white);
   font-weight: 500;
   transform: scale(0.9);
@@ -141,19 +141,47 @@ body {
   color: var(--white);
 }
 
-#ok {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#engage-icon {
+  width: 4rem;
+  height: 6rem;
+}
+
+#engage {
+  width: 10rem;
+  height: 4rem;
+  background-image: var(--glass-btn);
+  background-size: 10rem 4rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1rem;
+}
+
+#engage-text {
+  max-width: 8rem;
   font-family: "Source Code Pro", monospace;
   font-size: 1.5rem;
-  color: var(--white);
+  color: var(--black);
   font-weight: 800;
+  overflow: hidden;
+  border-right: 0.15em solid var(--black);
+  white-space: nowrap;
+  animation: typing 2s steps(20, end),
+    blinking-cursor-black 0.75s step-end infinite;
 }
 
 #intro-box {
   display: flex;
+}
+
+#federation {
+  width: 15rem;
+  position: absolute;
+  top: 5%;
+  left: -50vw;
+  animation-name: move-right;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
 }
 
 #intro {
@@ -168,7 +196,42 @@ body {
   border-right: 0.15em solid var(--white);
   white-space: nowrap;
   margin: 0 auto;
-  animation: typing 3s steps(20, end), blinking-cursor 0.75s step-end infinite;
+  animation: typing 3s steps(20, end),
+    blinking-cursor-white 0.75s step-end infinite;
+}
+
+#type {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 3.5rem;
+}
+
+#borg {
+  width: 15rem;
+  position: absolute;
+  bottom: 5%;
+  right: -50vw;
+  animation-name: move-left;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(150vw, 0);
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-150vw, 0);
+  }
 }
 
 @keyframes typing {
@@ -180,7 +243,17 @@ body {
   }
 }
 
-@keyframes blinking-cursor {
+@keyframes blinking-cursor-black {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--black);
+  }
+}
+
+@keyframes blinking-cursor-white {
   from,
   to {
     border-color: transparent;
@@ -188,11 +261,6 @@ body {
   50% {
     border-color: var(--white);
   }
-}
-
-#type {
-  font-family: "Shadows Into Light", cursive;
-  font-size: 3.5rem;
 }
 
 /* RESPONSIVE CSS */
@@ -206,37 +274,18 @@ body {
 
   #hello {
     font-size: 3rem;
-    margin: 1rem;
     white-space: nowrap;
-    letter-spacing: 0.25rem;
-  }
-
-  #name-form {
-    flex-direction: row;
-    margin: 1rem;
-    width: 100%;
-    justify-content: space-around;
   }
 
   #name {
-    width: 75%;
-    padding: 0.25rem 0.25rem 0.25rem 1rem;
-    border-radius: 0.5rem;
     font-size: 2rem;
   }
 
   #name::placeholder {
-    font-family: "Source Code Pro", monospace;
     font-size: 1.5rem;
   }
 
-  #submit {
-    width: 3rem;
-    height: 3rem;
-  }
-
   #intro {
-    font-size: 3.5rem;
     white-space: nowrap;
   }
 }
@@ -250,37 +299,18 @@ body {
 
   #hello {
     font-size: 3rem;
-    margin: 1rem;
     white-space: nowrap;
-    letter-spacing: 0.25rem;
-  }
-
-  #name-form {
-    flex-direction: row;
-    margin: 1rem;
-    width: 100%;
-    justify-content: space-around;
   }
 
   #name {
-    width: 75%;
-    padding: 0.25rem 0.25rem 0.25rem 1rem;
-    border-radius: 0.5rem;
     font-size: 2rem;
   }
 
   #name::placeholder {
-    font-family: "Source Code Pro", monospace;
     font-size: 1.5rem;
   }
 
-  #submit {
-    width: 3rem;
-    height: 3rem;
-  }
-
   #intro {
-    font-size: 3.5rem;
     white-space: nowrap;
   }
 }
@@ -294,37 +324,18 @@ body {
 
   #hello {
     font-size: 3rem;
-    margin: 1rem;
     white-space: nowrap;
-    letter-spacing: 0.25rem;
-  }
-
-  #name-form {
-    flex-direction: row;
-    margin: 1rem;
-    width: 100%;
-    justify-content: space-around;
   }
 
   #name {
-    width: 75%;
-    padding: 0.25rem 0.25rem 0.25rem 1rem;
-    border-radius: 0.5rem;
     font-size: 2rem;
   }
 
   #name::placeholder {
-    font-family: "Source Code Pro", monospace;
     font-size: 1.5rem;
   }
 
-  #submit {
-    width: 3rem;
-    height: 3rem;
-  }
-
   #intro {
-    font-size: 3.5rem;
     white-space: nowrap;
   }
 }
