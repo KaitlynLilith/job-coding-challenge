@@ -97,37 +97,40 @@ body {
 }
 
 #hello {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 1rem;
-  white-space: nowrap;
   letter-spacing: 0.25rem;
 }
 
 #name-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
   width: 100%;
-  justify-content: space-around;
 }
 
 #name {
-  width: 75%;
-  padding: 0.25rem 0.25rem 0.25rem 1rem;
+  width: 100%;
+  padding: 0.25rem 0.25rem 0.25rem 0.75rem;
   border-radius: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #name::placeholder {
   font-family: "Source Code Pro", monospace;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 #submit {
-  width: 3rem;
-  height: 3rem;
+  margin: 1rem;
+  width: 4rem;
+  height: 4rem;
   background-image: var(--square-btn);
   background-size: contain;
+  background-repeat: no-repeat;
   color: var(--white);
-  font-size: 1.25rem;
   font-weight: 500;
   transform: scale(0.9);
   transition: all 0.3s;
@@ -150,17 +153,17 @@ body {
 }
 
 #intro-box {
-  display: block;
+  display: flex;
 }
 
 #intro {
   font-size: 3.5rem;
-  white-space: nowrap;
 }
 
 #helloName {
   font-size: 3.5rem;
   font-family: "Source Code Pro", monospace;
+  text-transform: capitalize;
   overflow: hidden;
   border-right: 0.15em solid var(--white);
   white-space: nowrap;
@@ -200,6 +203,42 @@ body {
   html {
     font-size: 15px;
   }
+
+  #hello {
+    font-size: 3rem;
+    margin: 1rem;
+    white-space: nowrap;
+    letter-spacing: 0.25rem;
+  }
+
+  #name-form {
+    flex-direction: row;
+    margin: 1rem;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  #name {
+    width: 75%;
+    padding: 0.25rem 0.25rem 0.25rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+  }
+
+  #name::placeholder {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1.5rem;
+  }
+
+  #submit {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #intro {
+    font-size: 3.5rem;
+    white-space: nowrap;
+  }
 }
 
 /* Changes settings at 1024px to 1500px screen size */
@@ -208,6 +247,42 @@ body {
   html {
     font-size: 20px;
   }
+
+  #hello {
+    font-size: 3rem;
+    margin: 1rem;
+    white-space: nowrap;
+    letter-spacing: 0.25rem;
+  }
+
+  #name-form {
+    flex-direction: row;
+    margin: 1rem;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  #name {
+    width: 75%;
+    padding: 0.25rem 0.25rem 0.25rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+  }
+
+  #name::placeholder {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1.5rem;
+  }
+
+  #submit {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #intro {
+    font-size: 3.5rem;
+    white-space: nowrap;
+  }
 }
 
 /* Changes settings at 1501px screen size */
@@ -215,5 +290,41 @@ body {
   /* Changes the rem base */
   html {
     font-size: 25px;
+  }
+
+  #hello {
+    font-size: 3rem;
+    margin: 1rem;
+    white-space: nowrap;
+    letter-spacing: 0.25rem;
+  }
+
+  #name-form {
+    flex-direction: row;
+    margin: 1rem;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  #name {
+    width: 75%;
+    padding: 0.25rem 0.25rem 0.25rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+  }
+
+  #name::placeholder {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1.5rem;
+  }
+
+  #submit {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #intro {
+    font-size: 3.5rem;
+    white-space: nowrap;
   }
 }

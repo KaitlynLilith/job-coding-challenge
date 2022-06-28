@@ -7,7 +7,7 @@ class HelloView extends View {
     return `
       <div id="hello-box" class="rel flexc fcenter">
         <h1 id="hello" class="rel">Hello, what's your name?</h1>
-        <form id="name-form" class="rel flexr">
+        <form id="name-form" class="rel">
           <input
             type="text"
             id="name"

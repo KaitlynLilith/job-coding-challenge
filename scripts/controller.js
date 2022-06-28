@@ -10,7 +10,6 @@ function init() {
 init();
 
 function controlOKBtn() {
-  const helloName = helloView.getName();
-  model.state.name = helloName;
+  model.state.name = helloView.getName().toLowerCase();
   introView.render(model.state.name);
 }
