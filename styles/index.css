@@ -1,0 +1,219 @@
+/* Imports Shadows Into Light font at 400 weight  */
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+/* Imports Source Code Pro font at 500 weight  */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
+
+/* Sets universal CSS variables */
+:root {
+  /* White  */
+  --white: hsl(0, 0%, 100%);
+  /* Black */
+  --black: #000;
+  /* Background */
+  --index-background: url(../images/carbon-fiber-header.jpg);
+  /* Button background */
+  --square-btn: url(../images/square-button.png);
+}
+
+/* Makes every element into a box that includes margins and padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* UTILITY CLASSES */
+
+/* Gives elements relative position */
+.rel {
+  position: relative;
+}
+
+/* Makes a flex row */
+.flexr {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Makes a flex column */
+.flexc {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Makes flex elements centered */
+.fcenter {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Makes a grid container */
+.grid-container {
+  display: grid;
+}
+
+/* GENERAL PAGE FORMATTING */
+
+/* Effects all elements */
+html {
+  font-family: sans-serif;
+  font-size: 12px;
+  scroll-behavior: smooth;
+}
+
+/* Effects body elements */
+body {
+  position: relative;
+  font-family: "Shadows Into Light", cursive;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+#everything-box {
+  width: 100vw;
+  height: 100vh;
+  background-image: var(--index-background);
+  background-color: var(--black);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--white);
+}
+
+#insulation {
+  width: 100vw;
+  height: 100vh;
+}
+
+#centered-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#hello-box {
+}
+
+#hello {
+  font-size: 3rem;
+  margin: 1rem;
+  white-space: nowrap;
+  letter-spacing: 0.25rem;
+}
+
+#name-form {
+  margin: 1rem;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#name {
+  width: 75%;
+  padding: 0.25rem 0.25rem 0.25rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+
+#name::placeholder {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.5rem;
+}
+
+#submit {
+  width: 3rem;
+  height: 3rem;
+  background-image: var(--square-btn);
+  background-size: contain;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 500;
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
+
+#submit:hover {
+  transform: scale(1);
+  color: var(--white);
+}
+
+#ok {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: 800;
+}
+
+#intro-box {
+  display: block;
+}
+
+#intro {
+  font-size: 3.5rem;
+  white-space: nowrap;
+}
+
+#helloName {
+  font-size: 3.5rem;
+  font-family: "Source Code Pro", monospace;
+  overflow: hidden;
+  border-right: 0.15em solid var(--white);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3s steps(20, end), blinking-cursor 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinking-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--white);
+  }
+}
+
+#type {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 3.5rem;
+}
+
+/* RESPONSIVE CSS */
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Changes the rem base */
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Changes settings at 1024px to 1500px screen size */
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+  /* Changes the rem base */
+  html {
+    font-size: 20px;
+  }
+}
+
+/* Changes settings at 1501px screen size */
+@media only screen and (min-width: 1501px) {
+  /* Changes the rem base */
+  html {
+    font-size: 25px;
+  }
+}
