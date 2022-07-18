@@ -263,6 +263,31 @@ body {
   }
 }
 
+#change-view {
+  height: 100vh;
+}
+
+#coin {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 2px solid;
+  font-size: 2rem;
+}
+
+#total-box {
+  width: 10rem;
+  height: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#submit {
+  width: 15rem;
+  height: 3rem;
+  font-size: 2rem;
+  color: black;
+}
+
 /* RESPONSIVE CSS */
 
 /* Changes settings at 768px screen size to 1023px screen size*/
